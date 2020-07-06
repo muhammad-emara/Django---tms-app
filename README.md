@@ -37,4 +37,10 @@ Subjects taught
 1. Start Your server using 
         python manage.py runserver
 2. Copy the URL http://localhost:8000/ and open it in your browser
+3. use defualt username and password admin/admin
+4. Or create a new super user using
+```bash
+python manage.py createsuperuser
+
+````
 ```
