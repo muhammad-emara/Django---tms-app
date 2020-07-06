@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}TMS | Home{% endblock %}
+
+{% block content %}
+    <p>TMS-Teacher Managment System</p>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}! <a href="{% url 'admin:index' %}"><button type="button" class="btn btn-outline-secondary">Go To Home Page</button> </a>
+{% else %}
+ 
+<div class="align-middle">
+    <h1 id="welcome">Welcome To out Django - Teacher Management System (TMS)</h1>
+    <a href="{% url 'admin:index' %}"><button type="button" class="btn btn-outline-secondary">Signin</button> </a>
+</div>
+{% endif %}
+{% endblock %}
